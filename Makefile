@@ -1,10 +1,8 @@
 serve:
-	python3 manage.py runserver
-migrate:
-	python3 manage.py migrate
-check:
-	python3 manage.py check
-shell:
-	python manage.py shell
+	python3.6 manage.py runserver
 test:
-	python3.6 manage.py test news
+	python manage.py test news
+migrate:
+	python3.6 manage.py migrate
+makemigrations:
+	python manage.py makemigrations
