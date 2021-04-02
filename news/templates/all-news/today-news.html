@@ -2,6 +2,7 @@
 {% block content %} 
 {% load bootstrap3 %}
 {{ block.super}}
+{%load static%}
 
 <div class="container">
 
@@ -40,3 +41,10 @@
 </div>
 
 {% endblock %}
+
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
+  
+  {% endblock %}
+
+

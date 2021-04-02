@@ -18,6 +18,9 @@ from django.urls import path
 from django.conf.urls import include
 from django.contrib import admin
 from django_registration.backends.one_step.views import RegistrationView
+from rest_framework.authtoken.views import obtain_auth_token
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('news.urls')),
@@ -27,5 +30,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('tinymce/', include('tinymce.urls')),
-    
+    path('api-token-auth/', obtain_auth_token),
 ]
